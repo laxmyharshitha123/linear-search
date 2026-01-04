@@ -1,0 +1,38 @@
+## linear search
+* we have to start from first place of an array and search for the target element
+example : arr = [18,12,9,14,77,50]
+size of an array = 6
+question : find whether the 14 exixts in array or not
+answer : the 14 exists in 3
+* if there is no value found we have to return -1
+time complexity : best case : o(1) // constant
+                  worst case : o(n)//n means size of an element
+question : how many checks will the loop make in best case ie element fount at 0th index?
+ arr = [8,9,12.......200]
+target = 8
+answer : 1 comparision is done in best case
+* the best case doesnot depend on the size of the array
+worst case : you donot find the target item iterate/go through every item and then in the end it says donot find it.
+* size of an array = 100 -this means 100 comparisions 
+code for this : public class LinearSearch {
+                 static int LinearSerach(int[] arr,int target) {
+                    if(arr.length == 0) {
+                       return -1;
+                      }
+                        for(int i = 0;i < arr.length;i++) {
+                           if(arr[i] == target) {
+                                return i;
+                          }
+                       }
+                           return -1;
+                    }
+          public static void main(String[] args) {
+            int[] arr = {10,25,30,45,60};
+              int target = 45;
+               int result = LinearSearch(arr,target);
+               if(result == -1) {
+                    System.out.println("element not found");
+               }else{
+                    System.out.println("element found at index : " +result);
+                   }
+}
